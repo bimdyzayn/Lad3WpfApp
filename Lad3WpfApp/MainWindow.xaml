@@ -1,0 +1,57 @@
+﻿<Window x:Class="Lad3WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lad3WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="153*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="114*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="375*"/>
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Column="0" Margin="1,1,1,0" VerticalAlignment="Top" Padding="8" Grid.ColumnSpan="4" Height="36" >
+            <ComboBox Name="fonlist" Margin="0,-10,0,-11" VerticalAlignment="Bottom" IsEditable="False" SelectedIndex="0" Height="36" Width="124" SelectionChanged="fonlist_SelectionChanged">
+                <TextBlock>Arial</TextBlock>
+                <TextBlock>Times New Roman</TextBlock>
+                <TextBlock>Verdana</TextBlock>
+            </ComboBox>
+            <Separator />
+
+            <Separator />
+
+        </ToolBar>
+        <ComboBox HorizontalAlignment="Left" Margin="2,10,0,0" VerticalAlignment="Top" IsEditable="False" SelectedIndex="0" Height="24" Width="41" Grid.Column="1" >
+            <TextBlock>14</TextBlock>
+            <TextBlock>16</TextBlock>
+            <TextBlock>18</TextBlock>
+        </ComboBox>
+        <Button Grid.Column="1" 
+                    ClipToBounds="true" SnapsToDevicePixels="False" Margin="48,1,84,10" Grid.ColumnSpan="2">
+            <Image Source="/images/b.jpg" Height="30" Width="30" />
+        </Button>
+        <Button Grid.Column="2" 
+                    ClipToBounds="true" SnapsToDevicePixels="False" Margin="36,1,37,10">
+            <Image Source="/images/2.jpg" Height="30" Width="30" />
+        </Button>
+        <Button Grid.Column="2" 
+                    ClipToBounds="true" SnapsToDevicePixels="False" Margin="83,1,109,10" Grid.ColumnSpan="2">
+            <Image Source="/images/u.png" Height="30" Width="30" />
+        </Button>
+        <StackPanel Grid.Column="3" HorizontalAlignment="Left" Height="33" Margin="10,1,0,0" VerticalAlignment="Top" Width="94" >
+            <RadioButton GroupName="Color" VerticalAlignment="Top" Content="Чёрный" Margin="1" />
+            <RadioButton GroupName="Color" VerticalAlignment="Top" Content="Красный" IsChecked="True" Margin="1"/>
+        </StackPanel>
+        <Border BorderBrush="#FF3D80C3" BorderThickness="1" HorizontalAlignment="Left" Height="363" Grid.Row="1" VerticalAlignment="Top" Width="430" Grid.ColumnSpan="4" Margin="2,2,0,0"/>
+
+
+    </Grid>
+
+</Window>
